@@ -6,81 +6,111 @@
 # 各位注意 如果你构建的固件是硬路由 此文件的注释要酌情考虑是否打开 因为硬路由的闪存空间有限 若构建出来过大或者构建失败 记得调整本文件的注释
 # 考虑到istore商店的集成与否 属于高频操作 故 目前已将集成store的操作放置在 工作流的UI 选项 用户自行勾选 则集成  不勾选则不集成 以减少修改此文件的次数
 
-# 新增Run安装器 用于快速安装makeself打包的run文件 目前和quickfile的nginx配置冲突 请勿同时集成quickfile
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-run"
-# 首页和网络向导
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-quickstart-zh-cn"
-# 新增非常好用的文件管理器 sbwml/luci-app-quickfile （luci 23版本不支持 勿集成）
+# ==================== 文件管理 ====================
+
+# 文件管理器 quickfile（sbwml，luci23 版本不支持，勿集成）
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES bash quickfile luci-app-quickfile luci-i18n-quickfile-zh-cn"
-# 高级卸载 by YT Vedio Talk
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-uninstall"
-# 极光主题 by github eamonxg
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
-# 去广告adghome
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-adguardhome"
-# 代理相关
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openvpn-server luci-i18n-openvpn-server-zh-cn"
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-openvpn-zh-cn"
-# dae 独立代理 完整版由store提供run 自带依赖 可单独开关 (24.10 为 dae 版本)
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES dae luci-app-dae luci-i18n-dae-zh-cn dae-geoip dae-geosite"
-# 已更新到daed 1.28.0 版本
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-daed-zh-cn"
-# passwall 独立代理 完整版已更新到26.9.9 自带依赖 可单独开关
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-socket kmod-nft-tproxy luci-app-passwall luci-i18n-passwall-zh-cn"
-# passwall2 已更新到26.5.1
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-socket kmod-nft-tproxy luci-app-passwall2 luci-i18n-passwall2-zh-cn"
-# openclash 独立代理 自带全部依赖 可单独开关
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openclash luci-compat kmod-tun kmod-inet-diag kmod-nft-tproxy bash curl ip-full unzip"
-# homeproxy 独立代理 完整版已更新到26.187 自带sing-box内核依赖 可单独开关
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box luci-app-homeproxy luci-i18n-homeproxy-zh-cn"
-# sing-box 独立内核 由store提供run可单独升级最新版 可单独开关
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box"
-# 新版ssrp 支持mihomo
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES kmod-nft-tproxy kmod-nft-socket xray-core naiveproxy luci-app-ssr-plus luci-i18n-ssr-plus-zh-cn"
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-nikki-zh-cn"
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nekobox"
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES momo luci-app-momo luci-i18n-momo-zh-cn"
-# 新增 clashoo by kenzok8 注意若集成clashoo 则不能集成nikki 目前它们俩配置冲突
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES clashoo luci-app-clashoo luci-i18n-clashoo-zh-cn"
-# VPN
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard"
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES tailscale ip-full luci-app-tailscale-community luci-i18n-tailscale-community-zh-cn"
-# 分区扩容 by sirpdboy 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-partexp luci-i18n-partexp-zh-cn"
-# 看门狗watchdog by sirpdboy
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES watchdog luci-app-watchdog luci-i18n-watchdog-zh-cn"
-# 酷猫主题 by sirpdboy 
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-kucat"
-# 进阶设置 by sirpdboy 
-# 当luci-app-advancedplus插件开启时 需排除冲突项 luci-app-argon-config和luci-i18n-argon-config-zh-cn 减号代表排除
-# 若要集成此插件请注意相关issue:https://github.com/wukongdaily/ImmortalWrt-ImageBuilder/issues/521
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-advancedplus luci-i18n-advancedplus-zh-cn -luci-app-argon-config -luci-i18n-argon-config-zh-cn"
-# MosDNS
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES mosdns luci-app-mosdns luci-i18n-mosdns-zh-cn"
-# Turbo ACC 网络加速
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
-# 应用过滤 openappfilter.com
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-appfilter luci-i18n-appfilter-zh-cn"
-# Lucky大吉 
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky lucky"
-# 集客AC
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-gecoosac gecoosac"
-# 任务设置
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
-# Easytier
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES kmod-tun easytier luci-app-easytier luci-i18n-easytier-zh-cn"
-# 统一文件共享
+# 统一文件共享 unishare（webdav 共享）
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES webdav2 unishare luci-app-unishare"
-# IPSec VPN 服务器
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ipsec-vpnd-zh-cn"
-# Bandix流量监控 by timsaya
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES bandix luci-app-bandix luci-i18n-bandix-zh-cn"
-# IPTV 流媒体转发服务器 - rtp2httpd by stackia
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES rtp2httpd luci-app-rtp2httpd luci-i18n-rtp2httpd-zh-cn"
-# 静态文件服务器dufs 已由store提供完整run(0.46.0)
+# 静态文件服务器 dufs（store 提供完整 run 0.46.0）
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES dufs luci-app-dufs luci-i18n-dufs-zh-cn"
-# OpenList (Alist 变体) 网盘聚合 by sbwml
+# 网盘聚合 openlist2（Alist 变体，sbwml）
 CUSTOM_PACKAGES="$CUSTOM_PACKAGES openlist2 luci-app-openlist2 luci-i18n-openlist2-zh-cn"
+
+
+# ==================== 主题外观 ====================
+
+# 极光主题 aurora（eamonxg）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-aurora luci-app-aurora-config luci-i18n-aurora-config-zh-cn"
+# 酷猫主题 kucat（sirpdboy）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-theme-kucat"
+
+
+# ==================== 去广告 & DNS ====================
+
+# 去广告 AdGuardHome
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-adguardhome"
+# DNS 分流 mosdns（高性能，支持 DoH/DoQ）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES mosdns luci-app-mosdns luci-i18n-mosdns-zh-cn"
+
+
+# ==================== 代理相关 ====================
+
+# 透明代理 dae（24.10 为 dae 版本，store 提供 run，可单独开关）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES dae luci-app-dae luci-i18n-dae-zh-cn dae-geoip dae-geosite"
+# 透明代理 daed（已更新到 1.28.0）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-daed-zh-cn"
+# 代理 passwall（完整版 26.9.9，自带依赖，可单独开关）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-socket kmod-nft-tproxy luci-app-passwall luci-i18n-passwall-zh-cn"
+# 代理 passwall2（完整版 26.5.1，自带依赖，可单独开关）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-socket kmod-nft-tproxy luci-app-passwall2 luci-i18n-passwall2-zh-cn"
+# 代理 openclash（自带全部依赖，可单独开关）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openclash luci-compat kmod-tun kmod-inet-diag kmod-nft-tproxy bash curl ip-full unzip"
+# 代理 homeproxy（完整版 26.187，自带 sing-box 内核，可单独开关）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box luci-app-homeproxy luci-i18n-homeproxy-zh-cn"
+# sing-box 独立内核（store 提供 run 可单独升级，可单独开关）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box"
+# 代理 ssr-plus 新版（支持 mihomo，可单独开关）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES kmod-nft-tproxy kmod-nft-socket xray-core naiveproxy luci-app-ssr-plus luci-i18n-ssr-plus-zh-cn"
+# 代理 nikki
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-nikki-zh-cn"
+# 代理 nekobox
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-nekobox"
+# 代理 momo
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES momo luci-app-momo luci-i18n-momo-zh-cn"
+# 代理 clashoo（kenzok8；与 nikki 冲突，勿同时集成）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES clashoo luci-app-clashoo luci-i18n-clashoo-zh-cn"
+
+
+# ==================== VPN & 组网 ====================
+
+# OpenVPN 服务器
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openvpn-server luci-i18n-openvpn-server-zh-cn"
+# OpenVPN 客户端（语言包）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-openvpn-zh-cn"
+# WireGuard 协议支持
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-proto-wireguard"
+# Tailscale 组网（Community 版）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES tailscale ip-full luci-app-tailscale-community luci-i18n-tailscale-community-zh-cn"
+# 组网 easytier
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES kmod-tun easytier luci-app-easytier luci-i18n-easytier-zh-cn"
+# IPSec VPN 服务器（语言包）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-ipsec-vpnd-zh-cn"
+
+
+# ==================== 网络工具 ====================
+
+# 网络加速 Turbo ACC（集成 BBR、shortcut）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-turboacc"
+# 应用过滤 appfilter（openappfilter.com）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-appfilter luci-i18n-appfilter-zh-cn"
+# 端口转发 lucky 大吉
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-lucky lucky"
+# 集客AC gecoosac
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-gecoosac gecoosac"
+# 流量监控 bandix（timsaya）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES bandix luci-app-bandix luci-i18n-bandix-zh-cn"
+# IPTV 流媒体转发 rtp2httpd（stackia）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES rtp2httpd luci-app-rtp2httpd luci-i18n-rtp2httpd-zh-cn"
+
+
+# ==================== 系统工具 ====================
+
+# Run 安装器（与 quickfile 的 nginx 配置冲突，勿同时集成）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-run"
+# 首页和网络向导 quickstart
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-quickstart-zh-cn"
+# 高级卸载 uninstall（YT Vedio Talk）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-uninstall"
+# 分区扩容 partexp（sirpdboy）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-partexp luci-i18n-partexp-zh-cn"
+# 看门狗 watchdog（sirpdboy）
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES watchdog luci-app-watchdog luci-i18n-watchdog-zh-cn"
+# 进阶设置 advancedplus（sirpdboy；与 argon-config 冲突，条目内已用减号排除；issue: https://github.com/wukongdaily/ImmortalWrt-ImageBuilder/issues/521）
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-advancedplus luci-i18n-advancedplus-zh-cn -luci-app-argon-config -luci-i18n-argon-config-zh-cn"
+# 任务设置 taskplan
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-taskplan luci-i18n-taskplan-zh-cn"
+
 
 #===========================以下imm仓库内的软件==============================↓
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-3cat-zh-cn"
