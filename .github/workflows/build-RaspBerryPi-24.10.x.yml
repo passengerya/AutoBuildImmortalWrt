@@ -111,7 +111,7 @@ jobs:
               -e LUCI_VERSION=$luci_version \
               -e INCLUDE_DOCKER=$include_docker \
               -e ROOTSIZE=$size \
-              immortalwrt/imagebuilder:$tag /bin/bash -lc "/home/build/openwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
+              immortalwrt/imagebuilder:$tag /bin/bash -lc "set -o pipefail; /home/build/openwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
           done
           ls ${{ github.workspace }}/bin/targets/bcm27xx/${{ env.cpu }}
       
@@ -131,6 +131,7 @@ jobs:
           body_path: ${{ github.workspace }}/info.md
           files: |
             ${{ github.workspace }}/bin/targets/bcm27xx/${{ env.cpu }}/*squashfs-factory.img.gz
+          fail_on_unmatched_files: true
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -124,7 +124,7 @@ jobs:
               -e ENABLE_PPPOE="${{ github.event.inputs.enable_pppoe }}" \
               -e PPPOE_ACCOUNT="${{ github.event.inputs.pppoe_account }}" \
               -e PPPOE_PASSWORD="${{ github.event.inputs.pppoe_password }}" \
-          immortalwrt/imagebuilder:x86-64-openwrt-${luci_version} /bin/bash -lc "/home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
+          immortalwrt/imagebuilder:x86-64-openwrt-${luci_version} /bin/bash -lc "set -o pipefail; /home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
          
 
       - name: ✅ 复制固件到根目录
@@ -169,6 +169,7 @@ jobs:
         with:
           tag_name: "Custom-Installer-x86_64-ISO"
           body_path: "${{ github.workspace }}/img-installer/autobuild/info.md"
+          fail_on_unmatched_files: true
           files: |
             img-installer/output/custom-installer-x86_64.iso
           token: "${{ secrets.GITHUB_TOKEN }}"

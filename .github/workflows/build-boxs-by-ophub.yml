@@ -280,7 +280,7 @@ jobs:
               -e PROFILE=$profile \
               -e INCLUDE_DOCKER=$include_docker \
               -e ROOTFS_PARTSIZE=$rootfs_partsize \
-              immortalwrt/imagebuilder:armsr-armv8-openwrt-${luci_version} /bin/bash -lc "/home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
+              immortalwrt/imagebuilder:armsr-armv8-openwrt-${luci_version} /bin/bash -lc "set -o pipefail; /home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
           done
           
       - name: Download prebuilt rootfs.tar.gz
@@ -346,6 +346,7 @@ jobs:
           tag_name: ophub
           name: ImmortalWrt for boxs
           body_path: ${{ github.workspace }}/n1/box.md
+          fail_on_unmatched_files: true
           files: |
             ${{ env.PACKAGED_OUTPUTPATH }}/*.img.gz
         env:

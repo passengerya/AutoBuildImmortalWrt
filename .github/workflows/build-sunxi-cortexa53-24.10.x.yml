@@ -119,7 +119,7 @@ jobs:
               -e PROFILE=$profile \
               -e INCLUDE_DOCKER=$include_docker \
               -e ROOTSIZE=$ROOTFS_SIZE \
-              immortalwrt/imagebuilder:sunxi-cortexa53-openwrt-${luci_version} /bin/bash -lc "/home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
+              immortalwrt/imagebuilder:sunxi-cortexa53-openwrt-${luci_version} /bin/bash -lc "set -o pipefail; /home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
           done
 
      
@@ -140,6 +140,7 @@ jobs:
           body_path: ${{ github.workspace }}/sunxi-cortexa53/info.md
           files: |
             ${{ github.workspace }}/bin/targets/sunxi/cortexa53/*squashfs-sdcard.img.gz
+          fail_on_unmatched_files: true
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
