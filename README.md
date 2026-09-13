@@ -20,7 +20,7 @@
 基于 CI 的 ImageBuilder 工作流，用于自动化构建 ImmortalWrt 固件。
 > 1、支持自定义固件大小 默认1GB 不建议设置过大 推荐1G-2G 更大需求可通过自定义插件里的扩容插件自行扩容<br>
 > 2、支持可选预安装docker（可选）支持在UI上勾选是否集成商店 （24.10.6以下）<br>
-> 3、支持按需增加[第三方软件](https://github.com/wukongdaily/store/blob/master/README.md)  如何集成 https://github.com/wukongdaily/AutoBuildImmortalWrt/discussions/209 <br>
+> 3、支持按需增加[第三方软件](https://github.com/passengerya/store/blob/dev/README.md)  如何集成 https://github.com/wukongdaily/AutoBuildImmortalWrt/discussions/209 <br>
 > 4、点击这里查看👉🏻[全部支持的机型列表](https://github.com/wukongdaily/AutoBuildImmortalWrt/blob/master/SUPPORT.md) 👈🏻<br>
 > 5、在UI上 新增luci版本的可选项，默认最新版25.12.x https://github.com/wukongdaily/AutoBuildImmortalWrt/discussions/426<br>
 > 6、支持设置管理地址的ip 比如192.168.100.1 这里强调 这项功能仅针对多网口机型 单网口的逻辑还是自动获取ip模式（dhcp）无固定ip<br>
@@ -60,7 +60,7 @@ ISO在虚拟机引导后 跑码结束后，在命令行输入 `ddd` 按提示 �
 ## 如何查询imm仓库内有哪些插件
 https://mirrors.sjtug.sjtu.edu.cn/immortalwrt/releases/24.10.4/packages/x86_64/luci/
 ## 如何查询imm仓库外目前可以集成哪些插件
-https://github.com/wukongdaily/store
+https://github.com/passengerya/store/tree/dev
 > 具体方法 https://github.com/wukongdaily/AutoBuildImmortalWrt/discussions/209
 ## 【视频教程】如何集成第三方插件？
 https://www.youtube.com/watch?v=KN6AJYV1hBI <br>
