@@ -22,7 +22,7 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-adguardhome"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openvpn-server luci-i18n-openvpn-server-zh-cn"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-openvpn-zh-cn"
 # dae 独立代理 完整版由store提供run 自带依赖 可单独开关 (24.10 为 dae 版本)
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES dae luci-app-dae luci-i18n-dae-zh-cn dae-geoip dae-geosite"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES dae luci-app-dae luci-i18n-dae-zh-cn dae-geoip dae-geosite"
 # 已更新到daed 1.28.0 版本
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-daed-zh-cn"
 # passwall 独立代理 完整版已更新到26.9.9 自带依赖 可单独开关
@@ -30,9 +30,9 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-s
 # passwall2 已更新到26.5.1
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES geoview xray-core sing-box hysteria kmod-nft-socket kmod-nft-tproxy luci-app-passwall2 luci-i18n-passwall2-zh-cn"
 # openclash 独立代理 自带全部依赖 可单独开关
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openclash luci-compat kmod-tun kmod-inet-diag kmod-nft-tproxy bash curl ip-full unzip"
+CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-app-openclash luci-compat kmod-tun kmod-inet-diag kmod-nft-tproxy bash curl ip-full unzip"
 # homeproxy 独立代理 完整版已更新到26.187 自带sing-box内核依赖 可单独开关
-CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box luci-app-homeproxy luci-i18n-homeproxy-zh-cn"
+#CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box luci-app-homeproxy luci-i18n-homeproxy-zh-cn"
 # sing-box 独立内核 由store提供run可单独升级最新版 可单独开关
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES sing-box"
 # 新版ssrp 支持mihomo
@@ -92,7 +92,6 @@ CUSTOM_PACKAGES="$CUSTOM_PACKAGES openlist2 luci-app-openlist2 luci-i18n-openlis
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-advanced-reboot-zh-cn"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-airplay2-zh-cn"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-amule-zh-cn"
-#CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-appfilter-zh-cn"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-aria2-zh-cn"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-arpbind-zh-cn"
 #CUSTOM_PACKAGES="$CUSTOM_PACKAGES luci-i18n-attendedsysupgrade-zh-cn"
