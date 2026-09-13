@@ -1,0 +1,412 @@
+[
+  {
+    "sha": "74341a2a87183d6a62c5512010721bd129d6019a",
+    "node_id": "C_kwDOUYyC7doAKDc0MzQxYTJhODcxODNkNmE2MmM1NTEyMDEwNzIxYmQxMjlkNjAxOWE",
+    "commit": {
+      "author": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T15:45:14Z"
+      },
+      "committer": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T15:45:14Z"
+      },
+      "message": "fix(sync): 清理旧版本时匹配日期前缀避免误删不同版本文件",
+      "tree": {
+        "sha": "fe4b41f28bb7578e250b7138da6da7daa539808f",
+        "url": "https://api.github.com/repos/passengerya/store/git/trees/fe4b41f28bb7578e250b7138da6da7daa539808f"
+      },
+      "url": "https://api.github.com/repos/passengerya/store/git/commits/74341a2a87183d6a62c5512010721bd129d6019a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/passengerya/store/commits/74341a2a87183d6a62c5512010721bd129d6019a",
+    "html_url": "https://github.com/passengerya/store/commit/74341a2a87183d6a62c5512010721bd129d6019a",
+    "comments_url": "https://api.github.com/repos/passengerya/store/commits/74341a2a87183d6a62c5512010721bd129d6019a/comments",
+    "author": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e303f120b3733817cbb8224c5860c85fe0e646bf",
+        "url": "https://api.github.com/repos/passengerya/store/commits/e303f120b3733817cbb8224c5860c85fe0e646bf",
+        "html_url": "https://github.com/passengerya/store/commit/e303f120b3733817cbb8224c5860c85fe0e646bf"
+      }
+    ]
+  },
+  {
+    "sha": "e303f120b3733817cbb8224c5860c85fe0e646bf",
+    "node_id": "C_kwDOUYyC7doAKGUzMDNmMTIwYjM3MzM4MTdjYmI4MjI0YzU4NjBjODVmZTBlNjQ2YmY",
+    "commit": {
+      "author": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:54:19Z"
+      },
+      "committer": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:54:19Z"
+      },
+      "message": "docs: 更新 README 软件列表, 补充同步新增的应用\n\n- 新增: luci-app-passwall/homeproxy/OpenClash/openlist2/openwrt-daede/sing-box/xray-core/dufs/luci-theme-argon\n- 更新版本: iStore应用商店 0.2.1-r1, 高级卸载 v1.2.6\n- 修正: nikki 项目链接, ssr-plus 标注 mihomo 内核\n\nCo-Authored-By: Claude Code <noreply@anthropic.com>",
+      "tree": {
+        "sha": "651c79d6e02b901e87bde832d2f5ef46fa36f773",
+        "url": "https://api.github.com/repos/passengerya/store/git/trees/651c79d6e02b901e87bde832d2f5ef46fa36f773"
+      },
+      "url": "https://api.github.com/repos/passengerya/store/git/commits/e303f120b3733817cbb8224c5860c85fe0e646bf",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/passengerya/store/commits/e303f120b3733817cbb8224c5860c85fe0e646bf",
+    "html_url": "https://github.com/passengerya/store/commit/e303f120b3733817cbb8224c5860c85fe0e646bf",
+    "comments_url": "https://api.github.com/repos/passengerya/store/commits/e303f120b3733817cbb8224c5860c85fe0e646bf/comments",
+    "author": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ed4163de18a595d0e11a50ede2aed0a60ff66b8a",
+        "url": "https://api.github.com/repos/passengerya/store/commits/ed4163de18a595d0e11a50ede2aed0a60ff66b8a",
+        "html_url": "https://github.com/passengerya/store/commit/ed4163de18a595d0e11a50ede2aed0a60ff66b8a"
+      }
+    ]
+  },
+  {
+    "sha": "ed4163de18a595d0e11a50ede2aed0a60ff66b8a",
+    "node_id": "C_kwDOUYyC7doAKGVkNDE2M2RlMThhNTk1ZDBlMTFhNTBlZGUyYWVkMGE2MGZmNjZiOGE",
+    "commit": {
+      "author": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:45:17Z"
+      },
+      "committer": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:45:17Z"
+      },
+      "message": "chore: 清理误提交的 __pycache__, 加入 .gitignore\n\nCo-Authored-By: Claude Code <noreply@anthropic.com>",
+      "tree": {
+        "sha": "4f74f5fc83f25c819ab7c978db58ec09d7d04a2b",
+        "url": "https://api.github.com/repos/passengerya/store/git/trees/4f74f5fc83f25c819ab7c978db58ec09d7d04a2b"
+      },
+      "url": "https://api.github.com/repos/passengerya/store/git/commits/ed4163de18a595d0e11a50ede2aed0a60ff66b8a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/passengerya/store/commits/ed4163de18a595d0e11a50ede2aed0a60ff66b8a",
+    "html_url": "https://github.com/passengerya/store/commit/ed4163de18a595d0e11a50ede2aed0a60ff66b8a",
+    "comments_url": "https://api.github.com/repos/passengerya/store/commits/ed4163de18a595d0e11a50ede2aed0a60ff66b8a/comments",
+    "author": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "de9d809887df70da3291f044cf0eab06d82cde5c",
+        "url": "https://api.github.com/repos/passengerya/store/commits/de9d809887df70da3291f044cf0eab06d82cde5c",
+        "html_url": "https://github.com/passengerya/store/commit/de9d809887df70da3291f044cf0eab06d82cde5c"
+      }
+    ]
+  },
+  {
+    "sha": "de9d809887df70da3291f044cf0eab06d82cde5c",
+    "node_id": "C_kwDOUYyC7doAKGRlOWQ4MDk4ODdkZjcwZGEzMjkxZjA0NGNmMGVhYjA2ZDgyY2RlNWM",
+    "commit": {
+      "author": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:45:05Z"
+      },
+      "committer": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:45:05Z"
+      },
+      "message": "fix(ci): 定时同步改为北京时间 7:00, 修复文件名分类正则\n\n- cron 从 03:30 UTC(北京时间 11:30)调整为 23:00 UTC(北京时间 7:00)\n- RE_ARCH 的 all 标记改为必须带 _ 前缀且位于边界, 修复 passwall 被\n  误识别为 passw 的问题\n- RE_VERSION 兼容 v 前缀版本号, 修复 mosdns_v5.3.4 等 key 残留 _v 的问题\n\nCo-Authored-By: Claude Code <noreply@anthropic.com>",
+      "tree": {
+        "sha": "c9de7e0136d43c9061a72e3fb665924221054118",
+        "url": "https://api.github.com/repos/passengerya/store/git/trees/c9de7e0136d43c9061a72e3fb665924221054118"
+      },
+      "url": "https://api.github.com/repos/passengerya/store/git/commits/de9d809887df70da3291f044cf0eab06d82cde5c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/passengerya/store/commits/de9d809887df70da3291f044cf0eab06d82cde5c",
+    "html_url": "https://github.com/passengerya/store/commit/de9d809887df70da3291f044cf0eab06d82cde5c",
+    "comments_url": "https://api.github.com/repos/passengerya/store/commits/de9d809887df70da3291f044cf0eab06d82cde5c/comments",
+    "author": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d51ea6643a64c4aed72837a40ddf2c30ebb6f519",
+        "url": "https://api.github.com/repos/passengerya/store/commits/d51ea6643a64c4aed72837a40ddf2c30ebb6f519",
+        "html_url": "https://github.com/passengerya/store/commit/d51ea6643a64c4aed72837a40ddf2c30ebb6f519"
+      }
+    ]
+  },
+  {
+    "sha": "d51ea6643a64c4aed72837a40ddf2c30ebb6f519",
+    "node_id": "C_kwDOUYyC7doAKGQ1MWVhNjY0M2E2NGM0YWVkNzI4MzdhNDBkZGYyYzMwZWJiNmY1MTk",
+    "commit": {
+      "author": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:31:45Z"
+      },
+      "committer": {
+        "name": "passengerya",
+        "email": "yangrunzeng@163.com",
+        "date": "2026-09-13T11:31:45Z"
+      },
+      "message": "sync: 从 passengerya/CloudRunFilesBuilder 同步 run 文件 (2026-09-13)\n\n- 更新 25 个旧版本 run 文件(如 passwall 26.7.1-1 -> 26.9.9-1, ssrp r2 -> r9)\n- 新增 xray-core/openclash/openlist2/sing-box/openwrt-daede/dufs 等应用\n- x86 与 arm64 各 19 个文件, 变体选择延续仓库现有习惯\n\nCo-Authored-By: Claude Code <noreply@anthropic.com>",
+      "tree": {
+        "sha": "2486cf0cab51543e46299914aafa84b2dbc55e84",
+        "url": "https://api.github.com/repos/passengerya/store/git/trees/2486cf0cab51543e46299914aafa84b2dbc55e84"
+      },
+      "url": "https://api.github.com/repos/passengerya/store/git/commits/d51ea6643a64c4aed72837a40ddf2c30ebb6f519",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/passengerya/store/commits/d51ea6643a64c4aed72837a40ddf2c30ebb6f519",
+    "html_url": "https://github.com/passengerya/store/commit/d51ea6643a64c4aed72837a40ddf2c30ebb6f519",
+    "comments_url": "https://api.github.com/repos/passengerya/store/commits/d51ea6643a64c4aed72837a40ddf2c30ebb6f519/comments",
+    "author": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "passengerya",
+      "id": 88080424,
+      "node_id": "MDQ6VXNlcjg4MDgwNDI0",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88080424?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/passengerya",
+      "html_url": "https://github.com/passengerya",
+      "followers_url": "https://api.github.com/users/passengerya/followers",
+      "following_url": "https://api.github.com/users/passengerya/following{/other_user}",
+      "gists_url": "https://api.github.com/users/passengerya/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/passengerya/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/passengerya/subscriptions",
+      "organizations_url": "https://api.github.com/users/passengerya/orgs",
+      "repos_url": "https://api.github.com/users/passengerya/repos",
+      "events_url": "https://api.github.com/users/passengerya/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/passengerya/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "c77e2527ce0f8d32d0e30876b089d296e740b83d",
+        "url": "https://api.github.com/repos/passengerya/store/commits/c77e2527ce0f8d32d0e30876b089d296e740b83d",
+        "html_url": "https://github.com/passengerya/store/commit/c77e2527ce0f8d32d0e30876b089d296e740b83d"
+      }
+    ]
+  }
+]
