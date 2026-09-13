@@ -111,7 +111,7 @@ jobs:
               -e LUCI_VERSION=$luci_version \
               -e INCLUDE_DOCKER=$include_docker \
               -e ROOTSIZE=$size \
-              immortalwrt/imagebuilder:$tag /bin/bash /home/build/openwrt/build.sh
+              immortalwrt/imagebuilder:$tag /bin/bash -lc "/home/build/openwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
           done
           ls ${{ github.workspace }}/bin/targets/bcm27xx/${{ env.cpu }}
       

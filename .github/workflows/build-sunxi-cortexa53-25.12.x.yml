@@ -106,7 +106,7 @@ jobs:
               -e PROFILE=$profile \
               -e INCLUDE_DOCKER=$include_docker \
               -e ROOTFS_PARTSIZE=$ROOTFS_SIZE \
-          immortalwrt/imagebuilder:sunxi-cortexa53-openwrt-${luci_version} /bin/bash /home/build/immortalwrt/build.sh
+          immortalwrt/imagebuilder:sunxi-cortexa53-openwrt-${luci_version} /bin/bash -lc "/home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
          
 
      

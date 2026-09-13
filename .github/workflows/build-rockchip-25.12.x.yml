@@ -146,8 +146,8 @@ jobs:
       
       - name: Validate PPPoE Inputs
         run: |
-          if [[ "${{ inputs.enable_pppoe }}" == "yes" ]]; then
-            if [[ -z "${{ inputs.pppoe_account }}" || -z "${{ inputs.pppoe_password }}" ]]; then
+          if [[ "${{ github.event.inputs.enable_pppoe }}" == "yes" ]]; then
+            if [[ -z "${{ github.event.inputs.pppoe_account }}" || -z "${{ github.event.inputs.pppoe_password }}" ]]; then
               echo "Error: PPPoE account and password must be provided when PPPoE is enabled!"
               exit 1
             fi
@@ -163,7 +163,7 @@ jobs:
           fi
       - name: Check Docker
         run: |
-          if [[ "${{ inputs.include_docker }}" == "yes" ]]; then
+          if [[ "${{ github.event.inputs.include_docker }}" == "yes" ]]; then
              echo 'CUSTOM_PACKAGES="$CUSTOM_PACKAGES docker"' >> shell/custom-packages.sh
              echo "✅ 已为Rockchip平台补充 docker 组件"
           fi
@@ -203,10 +203,10 @@ jobs:
               -e PROFILE=$profile \
               -e INCLUDE_DOCKER=$include_docker \
               -e ROOTFS_PARTSIZE=$ROOTFS_SIZE \
-              -e ENABLE_PPPOE=${{ inputs.enable_pppoe }} \
-              -e PPPOE_ACCOUNT=${{ inputs.pppoe_account }} \
-              -e PPPOE_PASSWORD=${{ inputs.pppoe_password }} \
-          immortalwrt/imagebuilder:rockchip-armv8-openwrt-${luci_version} /bin/bash /home/build/immortalwrt/build.sh
+              -e ENABLE_PPPOE="${{ github.event.inputs.enable_pppoe }}" \
+              -e PPPOE_ACCOUNT="${{ github.event.inputs.pppoe_account }}" \
+              -e PPPOE_PASSWORD="${{ github.event.inputs.pppoe_password }}" \
+          immortalwrt/imagebuilder:rockchip-armv8-openwrt-${luci_version} /bin/bash -lc "/home/build/immortalwrt/build.sh 2>&1 | tee /tmp/imm_build.log"
         
     
       - name: Create info
